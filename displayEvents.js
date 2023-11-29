@@ -56,3 +56,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     displayEvents();
 });
+
+function resetEvents(){
+
+    localStorage.setItem('events', JSON.stringify([]));
+    location.reload();
+}
