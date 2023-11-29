@@ -79,6 +79,13 @@ function handleFormSubmit(event) {
 
     console.log('Form Data Saved:', formData);
 
+    new Noty({
+        theme: 'sunset',
+        text: 'Event Added',
+        type: 'success',
+        timeout: 1500 
+    }).show();
+
     resetForm();
 }
 
