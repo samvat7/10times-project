@@ -50,6 +50,11 @@
       font-size: 1vw;
   }
 
+  #multiSessionEvent{
+
+    margin-top: 12px;
+  }
+
   #event-form-child-div {
 
       display: flex;

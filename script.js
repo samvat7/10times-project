@@ -1,5 +1,5 @@
 function selectTheme(themeId) {
-    
+
     document.querySelectorAll('.theme img').forEach(img => {
         img.classList.remove('selected');
     });
@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function adjustImageHeight() {
         var img = document.getElementById('theme-preview-img');
         if (img) {
-            var width = img.offsetWidth; 
-            img.style.height = width + 'px'; 
+            var width = img.offsetWidth;
+            img.style.height = width + 'px';
         }
     }
 
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', adjustImageHeight);
 
     document.getElementById('theme-preview-img').addEventListener('click', function () {
-        document.getElementById('image-url-input').style.display = 'block'; 
+        document.getElementById('image-url-input').style.display = 'block';
 
         document.getElementById('')
     });
@@ -43,13 +43,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('update-image-button').addEventListener('click', function () {
         var imageUrl = document.getElementById('image-url').value;
-        document.getElementById('theme-preview-img').src = imageUrl; 
-        document.getElementById('thumbnail-img-url').value = imageUrl; 
+        document.getElementById('theme-preview-img').src = imageUrl;
+        document.getElementById('thumbnail-img-url').value = imageUrl;
     });
+
+    
+
 });
 
 function handleFormSubmit(event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
     var formData = {
         eventName: document.getElementById('eventName').value,
@@ -68,7 +71,7 @@ function handleFormSubmit(event) {
     console.log(formData);
 
     var eventsJson = localStorage.getItem('events');
-    var events = eventsJson ? JSON.parse(eventsJson) : []; 
+    var events = eventsJson ? JSON.parse(eventsJson) : [];
 
     events.push(formData);
 
@@ -90,6 +93,17 @@ function resetForm() {
     });
 
     document.getElementById('selected-theme').value = '';
+}
+
+function toggleCheckBox(){
+
+    var checkbox = document.getElementById('multiSessionEvent');
+
+        if (checkbox.checked) {
+            checkbox.value = "true";
+        } else {
+            checkbox.value = "false";
+        }
 }
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -107,10 +107,14 @@
 
                                 </div>
                                  </div>
-                            <div>
-                                <input type="checkbox" id="multiSessionEvent" name="multiSessionEvent">
+                            <div style="display: flex; justify-content: space-between;">
                                 <label for="multiSessionEvent" id="mutli-session-event-label">Create Multi-Session
                                     Event</label>
+                                <div id="multiSessionEvent" onclick="toggleCheckBox()">
+                                    <input type="checkbox"  name="multiSessionEvent">
+                                </div>
+                                
+                                
                             </div>
                             <div id="event-location-div">
                                 <i class="fa-solid fa-location-dot"></i><input type="text" id="eventLocation" name="eventLocation"
