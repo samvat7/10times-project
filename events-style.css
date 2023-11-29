@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.events-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+    
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.event-date {
+    position: relative;
+    flex-basis: 20%;
+    text-align: center;
+}
+
+.event-date h2 {
+    margin: 0;
+}
+
+.event-date p {
+    margin: 0;
+    color: #777;
+}
+
+.event-details {
+    display: flex;
+    flex-basis: 80%;
+    align-items: center;
+    border-left: 2px solid #eee;
+    padding-left: 20px;
+}
+
+.event-time {
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+
+.event-info {
+    flex-grow: 1;
+}
+
+.event-info h3 {
+    margin: 0 0 10px 0;
+}
+
+.event-info .event-host,
+.event-info .event-type {
+    margin: 0;
+    color: #555;
+}
+
+.event-invite {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.event-image img {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    border-radius: 5px;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width value to center the tooltip */
+  
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.6s;
+
+    font-size: 8px;
+  }
+  
+  .event-date:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
